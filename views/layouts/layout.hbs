@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head prefix="dc: http://purl.org/dc/elements/1.1 dcterms: http://purl.org/dc/terms">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="UTF-8">
+        <meta property="dc:title" content="Ochilă">
+        <meta property="dc:description" content="O aplicație pentru săpat în documente după informații și date">
+        <meta itemprop="name" content="Ochilă">
+        <meta itemprop="description" content="O aplicație pentru săpat în documente după informații și date">
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" charset="utf8" src="/js/main.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/lib/jquery-toast-plugin/dist/jquery.toast.min.css">
+        <link rel="stylesheet" type="text/css" href="/lib/datatables.net-dt/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+
+        {{!-- DATATABLES --}}
+        <link rel="stylesheet" type="text/css" href="/lib/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="/lib/datatables.net-select-bs4/css/select.bootstrap4.min.css">
+
+        <script type="text/javascript" charset="utf8" src="/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="/lib/handlebars/handlebars.runtime.min.js"></script> 
+        <script type="text/javascript" charset="utf8" src="/lib/handlebars/handlebars.min.js"></script> 
+        <title>{{title}}</title>
+    </head>
+    <body>
+        
+        <div class="container">
+            {{{body}}}
+        </div>
+        
+
+        <footer class="footer">
+            {{> footer}}
+        </footer>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script type="text/javascript" charset="utf8" src="/lib/popper.js/dist/umd/popper.min.js"></script>        
+        <script type="text/javascript" charset="utf8" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" charset="utf8" src="/lib/fontawesome/js/all.js"></script>
+        {{!-- DATATABLES --}}
+        <script type="text/javascript" charset="utf8" src="/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="/lib/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+        <script type="text/javascript" charset="utf8" src="/lib/datatables.net-buttons-dt/js/buttons.dataTables.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="/lib/datatables.net-select/js/dataTables.select.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="/lib/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+        
+        <script type="text/javascript" charset="utf8" src="/js/custom.js"></script>
+    </body>
+</html>

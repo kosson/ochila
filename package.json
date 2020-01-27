@@ -1,0 +1,76 @@
+{
+  "name": "ochila",
+  "version": "0.0.1",
+  "description": "O aplicație care testează fluxuri de prelucrare automată și semiautomată a surselor documentare",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon --exec 'mocha --recursive -R min'",
+    "test-win": "nodemon --exec mocha --recursive -R min",
+    "watch:sass": "node-sass src/sass/main.scss ../public/css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss ../public/css/style.comp.css",
+    "concat:css": "concat -o public/css/style.concat.css public/css/style.comp.css public/css/animate.css public/css/arrow.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' public/css/style.concat.css -o public/css/style.prefix.css",
+    "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosson/ochila.git"
+  },
+  "keywords": [
+    "ochilă",
+    "ochila",
+    "search",
+    "căutare",
+    "indexare",
+    "referințe",
+    "data",
+    "mining",
+    "text",
+    "mining",
+    "exploatarea",
+    "textelor",
+    "exploatarea",
+    "datelor"
+  ],
+  "author": "Nicolaie Constantinescu",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/kosson/ochila/issues"
+  },
+  "homepage": "https://github.com/kosson/ochila#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-redis": "^4.0.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "elasticsearch": "^16.6.0",
+    "express": "^4.17.1",
+    "express-hbs": "^2.3.0",
+    "fs": "0.0.1-security",
+    "helmet": "^3.21.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.8.9",
+    "mongoose-elasticsearch-xp": "^5.8.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.3.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  }
+}
